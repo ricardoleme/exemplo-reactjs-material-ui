@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -55,7 +55,7 @@ const useStyles = makeStyles(theme => ({
     })
   },
   menuButton: {
-    marginRight: 36
+    marginRight: 5
   },
   menuButtonHidden: {
     display: "none"
@@ -115,6 +115,10 @@ export default function Dashboard() {
   };
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
+  useEffect(() => {
+    document.title = 'Exemplo React - Dashboard';
+   }, []);
+
   return (
     <div className={classes.root}>
       <CssBaseline />
@@ -173,12 +177,12 @@ export default function Dashboard() {
         <Container maxWidth="lg" className={classes.container}>
           <Grid container spacing={3}>
             {/* Gráfico */}
-            <Grid item xs={12} md={8} lg={9}>
+            <Grid item xs={12} md={6} lg={6}>
               <Paper className={fixedHeightPaper}>
                 <Grafico />
               </Paper>
             </Grid>
-            {/* Recent Depositsa */}
+            {/* Cotações */}
             <Grid item xs={12} md={4} lg={3}>
               <Paper>
                 <Cotacao />
@@ -187,7 +191,7 @@ export default function Dashboard() {
             {/* Recent Orders */}
             <Grid item xs={12} md={8} lg={9}>
               <Paper className={classes.paper}>
-                <Orders />
+                
               </Paper>
             </Grid>
           </Grid>

@@ -35,7 +35,7 @@ export default function CardMoeda(props) {
           <Typography gutterBottom variant="h5" component="h2">
             {props.nomeMoeda}
           </Typography>
-          <Typography>
+          <Typography component="p">
            {props.cotacaoMoeda}&nbsp;
           {props.variacaoMoeda >0 ?          
           <Chip

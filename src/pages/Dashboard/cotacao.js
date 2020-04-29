@@ -11,13 +11,13 @@ export default function Cotacao() {
 
   // Nota: O array [] deps vazio significa
   // este useEffect será executado uma vez
-  // semelhante ao componentDidMount()
+  // semelhante ao antigo componentDidMount()
   useEffect(() => {
    carregaCotacoes();
   }, []);
 
   function carregaCotacoes(){
-    fetch("https://economia.awesomeapi.com.br/all/EUR-BRL,USD-BRL", {
+    fetch("https://economia.awesomeapi.com.br/all/USD-BRL", {
       cache: "no-store"
     })
       .then(res => res.json())
@@ -27,7 +27,7 @@ export default function Cotacao() {
           setCarregando(true);
           setCotacoes(result);
         },
-        // Nota: é importante lidar com errros aqui
+        // Nota: é importante lidar com erros aqui
         // em vez de um bloco catch() para não receber
         // exceções de erros reais nos componentes.
         error => {
@@ -60,7 +60,7 @@ export default function Cotacao() {
                     cotacaoMoeda={cotacoes.USD.ask} 
                     variacaoMoeda={cotacoes.USD.pctChange}
                     />                     
-        )}
+        )}        
       </React.Fragment>
     );
   }

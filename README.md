@@ -10,7 +10,7 @@ formulário de login e uma área de Dashboard que carrega a cotação das moedas
 Projeto utilizado nas minhas aulas de Programação para a Internet.
 O projeto está todo em português, com o objetivo de facilitar o primeiro contato com a tecnologia. :wink:
 
-![](../header.png)
+![](/src/assets/images/exemplo-app.gif)
 
 ## Instalação
 É necessário ter o Node.js e o NPM instalados em seu ambiente.  
@@ -18,6 +18,10 @@ O projeto está todo em português, com o objetivo de facilitar o primeiro conta
 Em seguida basta, carregar todas as dependências através do npm:
 ```sh
 npm i
+```
+Abra o projeto no seu [editor preferido](https://code.visualstudio.com/), abra o Terminal e carregue o projeto, informando:
+```sh
+npm start
 ```
 
 _Para mais especificações, consulte a documentação dentro do próprio código fonte._

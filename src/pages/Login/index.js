@@ -62,7 +62,8 @@ export default function Login() {
   // Nota: O array [] deps vazio significa
   // que este useEffect será executado uma vez
   // semelhante ao componentDidMount()
-  useEffect(() => {
+  useEffect(() => {    
+      document.title = 'Exemplo React - Área Reservada';     
     if (localStorage.getItem("usuario")) {
       setLembrarUsuario(true);
       setEmail(localStorage.getItem("usuario"));

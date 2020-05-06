@@ -17,6 +17,7 @@ O projeto está todo em português, com o objetivo de facilitar o primeiro conta
 
 Em seguida basta, carregar todas as dependências através do npm:
 ```sh
+cd exemplo-reactjs-material-ui
 npm i
 ```
 Abra o projeto no seu [editor preferido](https://code.visualstudio.com/), abra o Terminal e carregue o projeto, informando:
